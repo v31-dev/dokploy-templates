@@ -9,8 +9,8 @@ RUN apk update \
 # Download PocketBase
 RUN wget https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip \
     -O /tmp/pb.zip \
-    && mkdir -p /usr/local/bin/pocketbase/ \
-    && unzip /tmp/pb.zip -d /usr/local/bin/pocketbase/ \
+    && unzip /tmp/pb.zip -d /usr/local/bin/ \
+    && chmod +x /usr/local/bin/pocketbase \
     && rm /tmp/pb.zip
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
