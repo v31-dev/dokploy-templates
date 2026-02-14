@@ -3,8 +3,8 @@
  * Initializes application settings on boot
  */
 
-// Hook that runs after the admin user is created but before the server fully starts
-onBeforeBootstrap((e) => {
+// Hook that runs after the app is bootstrapped
+onAfterBootstrap((e) => {
   console.log("Initializing PocketBase settings...");
 
   try {
