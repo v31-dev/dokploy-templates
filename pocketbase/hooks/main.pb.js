@@ -5,6 +5,8 @@
 
 // Hook that runs when the app is bootstrapped
 onBootstrap((e) => {
+  e.next();
+  
   console.log("Initializing PocketBase settings...");
 
   try {
