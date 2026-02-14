@@ -7,12 +7,13 @@ A Docker image for deploying [PocketBase](https://pocketbase.io/docs/), an open-
 - **Self-contained Backend**: SQLite database and REST API in one
 - **Admin Dashboard**: Built-in UI for database and user management
 - **Lightweight**: Alpine Linux base for minimal footprint
-- **Pre-configured**: Automatic admin user creation on startup
+- **Pre-configured**: Automatic admin user creation on startup & other reasonable defaults
 
 ## Required Environment Variables
 
 | Variable | Description | Example |
 |----------|-------------|---------|
+| `APP_NAME` | Application name displayed in dashboard | `PocketBase` |
 | `ADMIN_EMAIL` | Admin account email | `admin@example.com` |
 | `ADMIN_PASSWORD` | Admin account password | `secure-password-123` |
 
@@ -26,6 +27,7 @@ docker build -t pocketbase:latest .
 docker run -d \
   -e ADMIN_EMAIL=admin@example.com \
   -e ADMIN_PASSWORD=secure-password-123 \
+  -e APP_NAME="My PocketBase App" \
   -p 8090:8090 \
   -v pb-data:/pb_data \
   -v pb-public:/pb_public \

@@ -16,6 +16,9 @@ RUN wget https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSIO
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+COPY hooks /pb_hooks
+COPY pb_public /pb_public
+
 EXPOSE 8090
 
 # Start PocketBase

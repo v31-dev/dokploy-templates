@@ -12,6 +12,7 @@ check_env_var() {
 }
 
 # Check required variables
+check_env_var "APP_NAME"
 check_env_var "ADMIN_EMAIL"
 check_env_var "ADMIN_PASSWORD"
 
