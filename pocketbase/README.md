@@ -26,14 +26,14 @@ docker build -t pocketbase:latest .
 docker run -d \
   -e ADMIN_EMAIL=admin@example.com \
   -e ADMIN_PASSWORD=secure-password-123 \
-  -p 8080:8080 \
+  -p 8090:8090 \
   -v pb-data:/pb_data \
   -v pb-public:/pb_public \
   -v pb-hooks:/pb_hooks \
   pocketbase:latest
 ```
 
-- The application is served as port `8080`. Admin dashboard can be accessed at `:8080/_/`
+- The application is served as port `8090`. Admin dashboard can be accessed at `:8090/_/`
 - The following container paths can be mounted to volumes -
     - `/pb_data`: SQLite database and uploaded files
     - `/pb_public`: Static files served publicly

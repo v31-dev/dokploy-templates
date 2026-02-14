@@ -18,5 +18,5 @@ check_env_var "ADMIN_PASSWORD"
 # Create Admin Superuser
 /usr/local/bin/pocketbase superuser upsert "$ADMIN_EMAIL" "$ADMIN_PASSWORD" --dir=/pb_data
 
-# Run PocketBase on port 8080
+# Run PocketBase on port 8090
 exec /usr/local/bin/pocketbase serve --dir=/pb_data --publicDir=/pb_public --hooksDir=/pb_hooks "$@"    
