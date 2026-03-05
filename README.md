@@ -1,3 +1,3 @@
-# Dokploy Templates
+# Docker Templates
 
-A set of Dockerfile templates for deploying Applications to Dokploy.
+A set of Dockerfile templates.
