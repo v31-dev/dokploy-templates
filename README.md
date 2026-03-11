@@ -1,3 +1,3 @@
-# Docker Templates
+# Templates
 
-A set of Dockerfile templates.
+A set of general purpose templates.

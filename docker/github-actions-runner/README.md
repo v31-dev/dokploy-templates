@@ -7,7 +7,6 @@ A Docker image for GitHub Actions self-hosted organization runners.
 - **Ephemeral Mode**: Auto-cleans after each job for security
 - **Non-root User**: Runs as `github` user
 - **Pre-installed Tools**: Python, Go, Node.js, npm, and common utilities
-- **Health Checks**: Built-in monitoring for Dokploy compatibility
 - **Lightweight**: Minimal footprint with only essential dependencies
 
 ## Required Environment Variables
@@ -25,7 +24,7 @@ A Docker image for GitHub Actions self-hosted organization runners.
 2. Create a new token with permissions:
    - `Repository access` - default
    - `Self-hosted runners` read & write
-3. Use this token as `GITHUB_TOKEN` in your Dokploy deployment
+3. Use this token as `GITHUB_TOKEN` in your deployment
 
 ## Docker Build & Run
 
