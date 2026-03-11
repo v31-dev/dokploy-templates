@@ -1,6 +1,6 @@
 # Test
 
-A Docker image for HTTP testing. It is helpful to test load balancing scenarios.
+A Docker image for HTTP testing. It is helpful for testing load balancing scenarios.
 
 ## Required Environment Variables
 

@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 3000;
 const HOSTNAME_TAG = process.env.HOSTNAME_TAG || 'unknown';
 
 const server = http.createServer((req, res) => {
-  // Get client IP from X-Forwarded-For (set by Traefik) or RemoteAddr
+  // Get client IP from X-Forwarded-For (set by proxy) or RemoteAddr
   const clientIp = req.headers['x-forwarded-for']?.split(',')[0].trim() || 
                    req.socket.remoteAddress || 
                    'unknown';
